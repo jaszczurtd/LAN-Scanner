@@ -1,0 +1,63 @@
+# Xcode
+#
+# gitignore contributors: remember to update Global/Xcode.gitignore, Objective-C.gitignore & Swift.gitignore
+
+## Build generated
+build/
+DerivedData/
+
+## Various settings
+*.pbxuser
+!default.pbxuser
+*.mode1v3
+!default.mode1v3
+*.mode2v3
+!default.mode2v3
+*.perspectivev3
+!default.perspectivev3
+build
+test-reports
+*.xcscmblueprint
+contents.xcworkspacedata
+build-*
+xcuserdata/
+
+## Other
+*.moved-aside
+*.xccheckout
+*.xcscmblueprint
+.DS_Store
+git-clang-format.diff
+*.locuser
+
+# Object files
+*.o
+*.ko
+*.obj
+*.elf
+
+# Precompiled Headers
+*.gch
+*.pch
+
+# Libraries
+*.lib
+*.la
+*.lo
+
+# Shared objects (inc. Windows DLLs)
+*.dll
+*.so
+*.so.*
+*.dylib
+
+# Executables
+*.exe
+*.out
+*.app
+*.i*86
+*.x86_64
+*.hex
+*.ipa
+*.apk
+report.xml
