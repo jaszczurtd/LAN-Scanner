@@ -21,6 +21,7 @@ test-reports
 contents.xcworkspacedata
 build-*
 xcuserdata/
+xcshareddata/
 
 ## Other
 *.moved-aside
