@@ -468,7 +468,7 @@
     return FALSE;
 }
 
--(int) getdefaultgateway: (in_addr_t *) addr  {
+-(int) getDefaultGateway: (in_addr_t *) addr  {
     int mib[] = {CTL_NET, PF_ROUTE, 0, AF_INET,
         NET_RT_FLAGS, RTF_GATEWAY};
     size_t l;
@@ -521,7 +521,7 @@
 
 -(NSString*) getRouterIP {
     struct in_addr gatewayaddr;
-    int r = [self getdefaultgateway:(&(gatewayaddr.s_addr))];
+    int r = [self getDefaultGateway:(&(gatewayaddr.s_addr))];
     if (r >= 0) {
         return [NSString stringWithUTF8String:inet_ntoa(gatewayaddr)];
     }
@@ -536,9 +536,7 @@
     NSString *data = nil;
     CFDictionaryRef dict = CNCopyCurrentNetworkInfo((CFStringRef) DEFAULT_WIFI_INTERFACE);
     if (dict) {
-        if(_DEBUG_.DEEP){
-            deb(@"AP Wifi: %@", dict);
-        }
+        deb(@"AP Wifi: %@", dict);
         data = [NSString stringWithString:(NSString *)CFDictionaryGetValue(dict, @"SSID")];
         CFRelease(dict);
     }
